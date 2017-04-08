@@ -25,7 +25,7 @@ namespace Sockets
                 socket.Bind(ipPoint);
                 socket.Listen(10);
                 Console.WriteLine("Server is on.. Press any key to continue..");
-                Console.ReadLine();
+                // Console.ReadLine();
 
                 // operations
 

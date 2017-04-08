@@ -1,19 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Client_Side_Sockets
 {
     class Program
     {
-        private static int prot = 8005;
-        static IPAddress ippoint = IPAddress.Parse("127.0.0.1");
-        static void Main(string[] args)
-        {
+        private static int port = 8005;
+        static IPAddress address = IPAddress.Parse("127.0.0.1");
 
+        static void Main()
+        {
+            try
+            {
+                IPEndPoint ipPoint = new IPEndPoint(address, port);
+                // create socket
+                Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                socket.Connect(ipPoint);
+                Console.WriteLine("Enter message....");
+                string message = Console.ReadLine();
+                byte[] arr = Encoding.Unicode.GetBytes(message);
+                socket.Send(arr);
+
+                // receiving the response
+
+                arr = new byte[256];
+                StringBuilder sb = new StringBuilder();
+                int bytes = 0;
+                do
+                {
+                    bytes = socket.Receive(arr, arr.Length, 0);
+                    sb.Append(Encoding.Unicode.GetString(arr, 0, bytes));
+                } while (socket.Available > 0);
+                Console.WriteLine("Server response... : " + sb);
+                socket.Shutdown(SocketShutdown.Both);
+                socket.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine("End of program");
+            Console.Read();
         }
     }
 }
