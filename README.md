@@ -1,1 +1,2 @@
-# Network_CSharp_Net
+# Working with network in C# 6.0 based on .NET Framework 4.6
+## Examples in each project...
