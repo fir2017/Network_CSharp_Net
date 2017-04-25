@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sockets", "Sockets\Sockets.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client_Side_Sockets", "Client_Side_Sockets\Client_Side_Sockets.csproj", "{9AD98706-C725-4E05-A6D7-BB7196D202DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPListener", "HTTPListener\HTTPListener.csproj", "{DBEFE788-4682-4226-BD28-0F9F0BCB6D32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9AD98706-C725-4E05-A6D7-BB7196D202DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AD98706-C725-4E05-A6D7-BB7196D202DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AD98706-C725-4E05-A6D7-BB7196D202DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEFE788-4682-4226-BD28-0F9F0BCB6D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEFE788-4682-4226-BD28-0F9F0BCB6D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEFE788-4682-4226-BD28-0F9F0BCB6D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEFE788-4682-4226-BD28-0F9F0BCB6D32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
