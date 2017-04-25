@@ -15,10 +15,10 @@ namespace HTTPListener
             listener.Start();
             Console.WriteLine("Waiting for requests...");
             while (true)
-            { 
+            {
                 HttpListenerContext context = listener.GetContextAsync().Result;
                 HttpListenerRequest request = context.Request;
-                Console.WriteLine("Received: " + request.HttpMethod + "\n");
+                Console.WriteLine("Received: Method: " + request.HttpMethod + "\nProtocol Version: " + request.ProtocolVersion + "\nAt: " + DateTime.Now.ToShortTimeString());
                 HttpListenerResponse response = context.Response;
 
                 string responsestring = "<html>" +
