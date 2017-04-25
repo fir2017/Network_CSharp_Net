@@ -29,7 +29,7 @@ namespace HTTPListener
                                                         "Hello from C# code" +
                                                 "</body>" +
                                         "</html>";
-                byte[] buffer = Encoding.UTF8.GetBytes(responsestring);
+                byte[] buffer = Encoding.UTF8.GetBytes(responsestring); 
                 response.ContentLength64 = buffer.Length;
                 Stream output = response.OutputStream;
                 output.Write(buffer, 0, buffer.Length);
