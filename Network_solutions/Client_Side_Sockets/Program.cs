@@ -14,7 +14,7 @@ namespace Client_Side_Sockets
         {
             try
             {
-                IPEndPoint ipPoint = new IPEndPoint(address, port);
+                IPEndPoint ipPoint = new IPEndPoint(address, port);  
                 // create socket
                 Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 socket.Connect(ipPoint);
