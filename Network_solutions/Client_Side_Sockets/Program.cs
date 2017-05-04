@@ -8,6 +8,7 @@ namespace Client_Side_Sockets
     class Program
     {
         private static int port = 8005;
+        // ip address
         static IPAddress address = IPAddress.Parse("127.0.0.1");
 
         static void Main()
